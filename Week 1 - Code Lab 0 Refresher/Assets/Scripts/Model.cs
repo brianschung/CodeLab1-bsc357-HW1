@@ -20,8 +20,8 @@ public class Model : MonoBehaviour
     void Update()
     {
         // set the text to the score
-        GetComponent<TextMesh>().text = score.ToString();
-        //score = GetComponent<UnityEngine.UI.Text>();
+        //GetComponent<TextMesh>().text = score.ToString();
+        GetComponent<UnityEngine.UI.Text>().text = score.ToString();
 
         // press R to restart
         if (Input.GetKey(KeyCode.R))
