@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 
 public class PlayerController : MonoBehaviour
@@ -14,20 +14,17 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Debug.Log("Hello world.");
-		rb = GetComponent<Rigidbody2D>();
-		
+		rb = GetComponent<Rigidbody2D>();		
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("");
-		
 
 		if (Input.GetKey(KeyCode.Space)) // if Space is pressed
 		{
 			rb.velocity = new Vector2(0,0);
-			//rb.AddForce(Vector2.down * force); 
+
 		}
 		else
 		{
@@ -47,10 +44,7 @@ public class PlayerController : MonoBehaviour
 			{
 				rb.AddForce(Vector2.down * force); //apply a force using the "force" var
 			}
-			if (Input.GetKey(KeyCode.R))
-			{
-				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-			}
+
 		}
 	}
 }

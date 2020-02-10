@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class Model : MonoBehaviour
 {
@@ -18,9 +21,13 @@ public class Model : MonoBehaviour
     {
         // set the text to the score
         GetComponent<TextMesh>().text = score.ToString();
+        //score = GetComponent<UnityEngine.UI.Text>();
 
-
-
+        // press R to restart
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
     }
 }
