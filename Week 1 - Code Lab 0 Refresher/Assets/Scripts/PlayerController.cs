@@ -21,23 +21,30 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("");
 		
-		if (Input.GetKey(KeyCode.W)) // if W is pressed
-		{
-			rb.AddForce(Vector2.up * force); //apply a force using the "force" var
-		}
-		if (Input.GetKey(KeyCode.A)) // if A is pressed
-		{
-			rb.AddForce(Vector2.left * force); //apply a force using the "force" var
-		}
-		if (Input.GetKey(KeyCode.D)) // if D is pressed
-		{
-			rb.AddForce(Vector2.right * force); //apply a force using the "force" var
-		}
-		if (Input.GetKey(KeyCode.S)) // if S is pressed
-		{
-			rb.AddForce(Vector2.down * force); //apply a force using the "force" var
-		}
-		
 
+		if (Input.GetKey(KeyCode.Space)) // if Space is pressed
+		{
+			rb.velocity = new Vector2(0,0);
+			//rb.AddForce(Vector2.down * force); 
+		}
+		else
+		{
+			if (Input.GetKey(KeyCode.W)) // if W is pressed
+			{
+				rb.AddForce(Vector2.up * force); //apply a force using the "force" var
+			}
+			if (Input.GetKey(KeyCode.A)) // if A is pressed
+			{
+				rb.AddForce(Vector2.left * force); //apply a force using the "force" var
+			}
+			if (Input.GetKey(KeyCode.D)) // if D is pressed
+			{
+				rb.AddForce(Vector2.right * force); //apply a force using the "force" var
+			}
+			if (Input.GetKey(KeyCode.S)) // if S is pressed
+			{
+				rb.AddForce(Vector2.down * force); //apply a force using the "force" var
+			}
+		}
 	}
 }
