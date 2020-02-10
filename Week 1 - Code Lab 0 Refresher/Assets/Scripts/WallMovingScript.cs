@@ -2,25 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Model : MonoBehaviour
+public class WallMovingScript : MonoBehaviour
 {
-
-    public static int score=0;
-
+    Rigidbody2D rbmovingwall;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rbmovingwall = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // set the text to the score
-        GetComponent<TextMesh>().text = score.ToString();
-
-
-
-
+        rbmovingwall.AddForce(Vector2.left * 5); 
     }
 }

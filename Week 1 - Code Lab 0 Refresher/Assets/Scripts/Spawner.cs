@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Model : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
-
-    public static int score=0;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +13,7 @@ public class Model : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // set the text to the score
-        GetComponent<TextMesh>().text = score.ToString();
-
-
+        
 
 
     }

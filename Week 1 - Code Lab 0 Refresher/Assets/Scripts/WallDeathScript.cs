@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Model : MonoBehaviour
+public class WallDeathScript : MonoBehaviour
 {
-
-    public static int score=0;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +13,8 @@ public class Model : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // set the text to the score
-        GetComponent<TextMesh>().text = score.ToString();
 
-
-
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(219.0f + Mathf.Sin(Time.time) * 100, 0.085f, 0.085f, 1.0f);
 
     }
 }

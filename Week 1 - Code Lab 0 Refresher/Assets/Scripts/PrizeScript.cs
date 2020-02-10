@@ -31,8 +31,10 @@ public class PrizeScript : MonoBehaviour
 	
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
+        gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
         //transform.position = new Vector2(Random.Range(-3,3), Random.Range(20,22));
         Instantiate(myPrefab, new Vector2(Random.Range(-3, 3), Random.Range(20, 22)), Quaternion.identity);
+        //Destroy(GetComponent<Rigidbody2D>());
         Destroy(gameObject);
         Model.score = Model.score+1;
         Debug.Log(Model.score);

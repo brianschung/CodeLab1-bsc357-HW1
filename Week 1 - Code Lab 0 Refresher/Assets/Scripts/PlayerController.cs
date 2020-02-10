@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -44,6 +46,10 @@ public class PlayerController : MonoBehaviour
 			if (Input.GetKey(KeyCode.S)) // if S is pressed
 			{
 				rb.AddForce(Vector2.down * force); //apply a force using the "force" var
+			}
+			if (Input.GetKey(KeyCode.R))
+			{
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 			}
 		}
 	}
