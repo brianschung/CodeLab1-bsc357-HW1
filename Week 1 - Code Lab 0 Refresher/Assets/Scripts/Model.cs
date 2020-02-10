@@ -26,6 +26,7 @@ public class Model : MonoBehaviour
         // press R to restart
         if (Input.GetKey(KeyCode.R))
         {
+            score = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
